@@ -9,7 +9,7 @@ const AddDepartment = () => {
   const navigate = useNavigate();
   
   const handleAddDepartment = () => {
-    axios.post('http://localhost:8000/addDept', { departmentName, description })
+    axios.post('https://employee-api-sand.vercel.app/addDept', { departmentName, description })
       .then(result => {
         console.log(result);
         navigate('/department');

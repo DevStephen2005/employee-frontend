@@ -11,7 +11,7 @@ const UpdateDept = () => {
 
   // Retrieve Updated Department Data.
   useEffect(() => {
-    axios.get(`http://localhost:8000/getDept/${id}`)
+    axios.get(`https://employee-api-sand.vercel.app/getDept/${id}`)
       .then(result => {
         setDepartmentName(result.data.departmentName);
         setDescription(result.data.description);

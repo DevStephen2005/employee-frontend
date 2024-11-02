@@ -9,7 +9,7 @@ const SalaryList = () => {
   // Retrieve Salary Data
   useEffect(() => {
     axios
-      .get("http://localhost:8000/getSalary")
+      .get("https://employee-api-sand.vercel.app/getSalary")
       .then((result) => {
         setSalary(result.data);
         console.log(result);
@@ -20,7 +20,7 @@ const SalaryList = () => {
   // Delete Record
   const deleteHandler = (id) => {
     axios
-      .delete("http://localhost:8000/deleteSalary/" + id)
+      .delete("https://employee-api-sand.vercel.app/deleteSalary/" + id)
       .then((result) => {
         console.log(result);
         // Remove the deleted salary from the state without reloading

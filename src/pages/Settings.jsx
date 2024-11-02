@@ -28,7 +28,7 @@ const Settings = () => {
     };
 
     // Make the PUT request
-    axios.put('http://localhost:8000/updatePassword', payload)
+    axios.put('https://employee-api-sand.vercel.app/updatePassword', payload)
       .then((result) => {
          console.log(result)
         navigate('/employeeDashboard')

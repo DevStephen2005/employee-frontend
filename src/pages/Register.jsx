@@ -66,7 +66,7 @@ function Register() {
 
     if (validateForm()) {
       // If validation passes, send the form data to the backend
-      axios.post("http://localhost:8000/signup", formData)
+      axios.post("https://employee-api-sand.vercel.app/signup", formData)
         .then((result) => {
           console.log(result);
           navigate('/');

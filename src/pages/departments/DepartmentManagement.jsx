@@ -9,7 +9,7 @@ const DepartmentManagement = () => {
   // Retrieve Department Data.
   useEffect(() => {
     axios
-      .get("http://localhost:8000/")
+      .get("https://employee-api-sand.vercel.app/")
       .then((result) => {
         setDepartments(result.data);
         console.log(result);
@@ -20,7 +20,7 @@ const DepartmentManagement = () => {
   // Delete Record
   const deleteHandler = (id) => {
     axios
-      .delete("http://localhost:8000/deleteDept/" + id)
+      .delete("https://employee-api-sand.vercel.app/deleteDept/" + id)
       .then((result) => {
         console.log(result);
         location.reload();

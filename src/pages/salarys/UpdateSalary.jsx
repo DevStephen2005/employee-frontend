@@ -19,7 +19,7 @@ const UpdateSalary = () => {
   useEffect(() => {
     const fetchSalaryData = async () => {
       try {
-        const result = await axios.get(`http://localhost:8000/getSalary/${id}`);
+        const result = await axios.get(`https://employee-api-sand.vercel.app/getSalary/${id}`);
         setSalaryData(result.data);
       } catch (error) {
         console.log("Error fetching salary data:", error);
@@ -38,7 +38,7 @@ const UpdateSalary = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:8000/updateSalary/${id}`, salaryData)
+    axios.put(`https://employee-api-sand.vercel.app/updateSalary/${id}`, salaryData)
       .then(() => navigate('/salaryList'))
       .catch((error) => console.log("Error updating salary data:", error));
   };

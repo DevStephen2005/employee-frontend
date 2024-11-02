@@ -28,7 +28,7 @@ const UpdateEmployee = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:8000/updateEmp/${id}`, employee)
+    axios.put(`https://employee-api-sand.vercel.app/updateEmp/${id}`, employee)
       .then(() => navigate('/employeeList'))
       .catch((error) => console.log("Error updating employee data:", error));
   };

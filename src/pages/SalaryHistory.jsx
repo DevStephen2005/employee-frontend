@@ -9,7 +9,7 @@ const SalaryHistory = () => {
   // Retrieve Salary Data
   useEffect(() => {
     axios
-      .get("http://localhost:8000/getSalary")
+      .get("https://employee-api-sand.vercel.app/getSalary")
       .then((result) => {
         setSalary(result.data);
         console.log(result);

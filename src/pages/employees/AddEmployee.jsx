@@ -46,7 +46,7 @@ const AddEmployee = () => {
     });
     formData.append('file', file);
 
-    axios.post('http://localhost:8000/addEmp', formData, {
+    axios.post('https://employee-api-sand.vercel.app/addEmp', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
     })
     .then(() => navigate('/employeeList'))

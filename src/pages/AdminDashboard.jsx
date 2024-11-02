@@ -17,7 +17,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     // Fetch data from API using Axios
-    axios.get("http://localhost:8000/adminDashboard")
+    axios.get("https://employee-api-sand.vercel.app/adminDashboard")
       .then(response => {
         const data = response.data;
         setDashboardData({

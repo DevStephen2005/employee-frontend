@@ -8,7 +8,7 @@ function ViewEmployee() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/viewEmp/${id}`)
+      .get(`https://employee-api-sand.vercel.app/viewEmp/${id}`)
       .then((result) => {
         setEmployee(result.data);
         console.log(result);

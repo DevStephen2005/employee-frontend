@@ -9,7 +9,7 @@ const LeaveManage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/getLeave")
+      .get("https://employee-api-sand.vercel.app/getLeave")
       .then((result) => {
         setLeaves(result.data);
         console.log(result);

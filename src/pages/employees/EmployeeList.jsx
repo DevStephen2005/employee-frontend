@@ -18,7 +18,7 @@ const EmployeeList = () => {
 
   const deleteHandler = (id) => {
     axios
-      .delete("http://localhost:8000/deleteEmp/" + id)
+      .delete("https://employee-api-sand.vercel.app/deleteEmp/" + id)
       .then((result) => {
         console.log(result);
         setEmployees(employees.filter((emp) => emp._id !== id));

@@ -41,7 +41,7 @@ const AddSalary = () => {
     e.preventDefault();
     if (!validate()) return;
 
-    axios.post('http://localhost:8000/addSalary', salaryData)
+    axios.post('https://employee-api-sand.vercel.app/addSalary', salaryData)
       .then((result) => {
         console.log(result);
         navigate('/salaryList');

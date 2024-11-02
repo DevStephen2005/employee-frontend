@@ -40,7 +40,7 @@ const AddLeave = () => {
     const newErrors = validateForm();
     if (Object.keys(newErrors).length === 0) {
       // Submit form data if there are no errors
-      axios.post('http://localhost:8000/addLeave',formData)
+      axios.post('https://employee-api-sand.vercel.app/addLeave',formData)
       .then((result) => {
         console.log(result);
         navigate('/leave');
